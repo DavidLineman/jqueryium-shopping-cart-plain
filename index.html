@@ -23,13 +23,56 @@
       <div class="row">
         <div class="col-12">
           <table class="table table-responsive">
-            <tr>
-              <th scope="col">Item</th>
-              <th scope="col">Price</th>
-              <th scope="col">Quantity</th>
-              <th scope="col">Item Total</th>
-            </tr>
+            <tbody>
+              <tr>
+                <th scope="col">Item</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Item Total</th>
+              </tr>
+              <tr>
+                <td class="item">Salmon</td>
+                <td class="price">60.00</td>
+                <td>QTY <input type="number" placeholder="0"> <button>Cancel</button></td>
+                <td class="item-total"></td>
+              </tr>
+              <tr>
+                <td class="item">Tuna</td>
+                <td>50.00</td>
+                <td>QTY <input type="number" placeholder="0"> <button>Cancel</button></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="item">Carp</td>
+                <td>40.00</td>
+                <td>QTY <input type="number" placeholder="0"> <button>Cancel</button></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="item">Pork</td>
+                <td>50.00</td>
+                <td>QTY <input type="number" placeholder="0"> <button>Cancel</button></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="item">Beef</td>
+                <td>40.00</td>
+                <td>QTY <input type="number" placeholder="0"> <button>Cancel</button></td>
+                <td></td>
+              </tr>
+            </tbody>
           </table>
+
+          <form class="col-12" id="addItem">
+            <input name="item" type="text" placeholder="item" required>
+            <input name="price" type="number" placeholder="Price" required>
+            <button class="btn btn-success">Create</button>
+          </form>
+
+          <div class="container">
+            <h2>Order Total:</h2>
+            <h1 class="final-price"></h1>
+          </div>
         </div>
       </div>
 
