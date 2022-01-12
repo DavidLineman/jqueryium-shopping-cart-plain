@@ -25,49 +25,42 @@
           <table class="table table-responsive">
             <tbody>
               <tr>
-                <th scope="col">Item</th>
-                <th scope="col">Price</th>
-                <th scope="col">Quantity</th>
-                <th scope="col">Item Total</th>
-              </tr>
-              <tr>
                 <td class="item">Salmon</td>
-                <td class="price-one">60.00</td>
-                <td class="quantity-one"><input type="number" name="quantity-one"></td>
-                <td><button>Cancel</button></td>
-                <td class="item-subtotal-one">$--.--</td>
+                <td class="price">60.00</td>
+                <td class="quantity"><label>QTY </label><input type="number" name="quantity" value="0"></td>
+                <td class="item-subtotal" value="0">$0</td>
               </tr>
               <tr>
                 <td class="item">Tuna</td>
                 <td class="price">50.00</td>
-                <td class="quantity"><input type="number" name="quantity"></td>
-                <td class="item-subtotal">$--.--</td>
+                <td class="quantity"><input type="number" name="quantity" value="0"></td>
+                <td class="item-subtotal" value="0">$--.--</td>
               </tr>
               <tr>
                 <td class="item">Carp</td>
                 <td class="price">40.00</td>
-                <td class="quantity"><input type="number" name="quantity"></td>
-                <td class="item-subtotal">$--.--</td>
+                <td class="quantity"><input type="number" name="quantity" value="0"></td>
+                <td class="item-subtotal" value="0">$--.--</td>
               </tr>
               <tr>
                 <td class="item">Pork</td>
                 <td class="price">50.00</td>
-                <td class="quantity"><input type="number" name="quantity"></td>
-                <td class="item-subtotal">$--.--</td>
+                <td class="quantity"><input type="number" name="quantity" value="0"></td>
+                <td class="item-subtotal" value="0">$--.--</td>
               </tr>
               <tr>
                 <td class="item">Beef</td>
                 <td class="price">40.00</td>
-                <td class="quantity"><input type="number" name="quantity"></td>
-                <td class="item-subtotal">$--.--</td>
+                <td class="quantity"><input type="number" name="quantity" value="0"></td>
+                <td class="item-subtotal" value="0">$--.--</td>
               </tr>
             </tbody>
           </table>
 
           <form class="col-12" id="addItem">
-            <input name="item" type="text" placeholder="item" required>
+            <input name="item" type="text" placeholder="Item" required>
             <input name="price" type="number" placeholder="Price" required>
-            <button class="btn btn-success">Create</button>
+            <button class="btn btn-success">ADD ITEM</button>
           </form>
 
           <div class="container">
