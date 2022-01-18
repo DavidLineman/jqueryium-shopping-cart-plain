@@ -43,14 +43,7 @@ let getTotalPrice = function() {
 
 $(document).ready(function () {
   getTotalPrice();
-  
 
-
- 
-
-  $('tr input').on('input', function(event) {
-    getTotalPrice();
-  })
   
   $('#addItem').on('submit', function (event) {
     event.preventDefault();
@@ -62,8 +55,8 @@ $(document).ready(function () {
       '<tr>' +
         '<td class="item">' + item + '</td>' +
         '<td class="price">' + price + '.00' + '</td>'  +
-        '<td class="quantity"><input type="number" name="quantity" value="0"></td>' +
-        '<td class="item-subtotal" value="0">$--.--</td>' +
+        '<td class="quantity"><input type="number" name="quantity"></td>' +
+        '<td class="item-subtotal" value="0">$0</td>' +
       '</tr>');
   
     getTotalPrice();
@@ -72,6 +65,9 @@ $(document).ready(function () {
     
   });
 
+  $('tr input').on('input', function(event) {
+    getTotalPrice();
+  })
 
 });
 
