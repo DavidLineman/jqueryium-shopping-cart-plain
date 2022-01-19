@@ -11,7 +11,7 @@ let getSubTotal = function(ele) {
   } 
 
   if(isNaN(subTotal)) {
-    $(ele).children('.item-subtotal').html('$--.--');
+    $(ele).children('.item-subtotal').html('$0');
   } else {
     $(ele).children('.item-subtotal').html('$' + subTotal);
   }
@@ -31,9 +31,9 @@ let getTotalPrice = function() {
     console.log(totalPrice);
 
     if(isNaN(totalPrice)) {
-      $('.final-price').html('$--.--')
+      $('.final-price').html('$0')
     } else {
-      $('.final-price').html(totalPrice);
+      $('.final-price').html('$' + totalPrice);
     }
     
   }); 
@@ -55,8 +55,8 @@ $(document).ready(function () {
       '<tr>' +
         '<td class="item">' + item + '</td>' +
         '<td class="price">' + price + '.00' + '</td>'  +
-        '<td class="quantity"><input type="number" name="quantity"></td>' +
-        '<td class="item-subtotal" value="0">$0</td>' +
+        '<td class="quantity"><label>QTY</label><input type="number" name="quantity" value="0"><button>Remove</button></td>' +
+        '<td class="item-subtotal">$0</td>' +
       '</tr>');
   
     getTotalPrice();
@@ -65,8 +65,14 @@ $(document).ready(function () {
     
   });
 
-  $('tr input').on('input', function(event) {
+  $(document).on('click', 'button', function (event) {
+    $(this).closest('tr').remove();
     getTotalPrice();
+  });
+
+  $(document).on('input', 'tr input', function(event) {
+    getTotalPrice();
+    console.log($('#boogers').val())
   })
 
 });
